@@ -13,7 +13,6 @@ class SessionsController < ApplicationController
         status: :created,
         logged_in: true,
         user: user,
-        movies: @current_user.movies
       }
     else
       render json: { status: 401 }
