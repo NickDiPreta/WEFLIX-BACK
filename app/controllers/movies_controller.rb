@@ -36,7 +36,7 @@ class MoviesController < ApplicationController
 
   def update
       movie = Movie.find(params[:id])
-      mobie.update(movie_params)
+      movie.update(movie_params)
       render(status: 201, json: {status: 201, movie: movie})
   end
 
@@ -48,7 +48,7 @@ class MoviesController < ApplicationController
   private
 
   def movie_params
-      params.permit(:title, :user_id)
+      params.require(:movie).permit(:title, :user_id)
   end
 
 end
