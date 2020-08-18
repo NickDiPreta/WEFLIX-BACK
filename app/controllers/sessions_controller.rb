@@ -24,8 +24,7 @@ class SessionsController < ApplicationController
     if @current_user
       render json: {
         logged_in: true,
-        user: @current_user,
-        movies: @current_user.movies
+        user: @current_user
       }
     else
       render json: {
