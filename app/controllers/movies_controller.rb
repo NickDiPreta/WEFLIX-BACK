@@ -18,7 +18,7 @@ class MoviesController < ApplicationController
       render json: {status: 200, song: song}
   end
 
-  # POST   /songs(.:format)     songs#create
+  # POST   /movies(.:format)     songs
   def create
       puts "create route: params #{params[:movie]}"
       # song_params = {title: params[:title], artist_name: params[:artist_name], artwork: params[:artwork]}
